@@ -3,6 +3,10 @@ Moonlander, the classic 1973 video game for the DEC GT40
 
 History
 =======
+5.0.0               Patrick's modernization update
+                    - Modernize App Icon implementation
+                    - Move UIWebView to WKWebView
+
 4.0.7               Full italics support
 
 4.0.6               Basic KW GT40 Mono font support

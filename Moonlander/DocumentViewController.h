@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Webkit/WebKit.h>
 
-@interface DocumentViewController : UIViewController <UIWebViewDelegate>
+@interface DocumentViewController : UIViewController <WKNavigationDelegate>
 {
                 NSString                    *_documentName; 
                 NSString                    *_documentType; 
                 NSURL                       *_documentURL;
     IBOutlet    UIActivityIndicatorView     *_activityIndicator;
-    IBOutlet    UIWebView                   *_documentContent;
+    IBOutlet    WKWebView                   *_documentContent;
                 BOOL                        _segueActive;
 }
 
@@ -22,7 +23,7 @@
 @property (nonatomic, strong) NSString *documentType;
 @property (nonatomic, strong) NSURL *documentURL;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
-@property (nonatomic, strong) UIWebView *documentContent;
+@property (nonatomic, strong) WKWebView *documentContent;
 @property (nonatomic) BOOL segueActive;
 
 @end

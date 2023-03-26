@@ -107,6 +107,7 @@
 		56EF5137154E59A3001E7B77 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 56173A0C154661BB00380AB4 /* Default-Landscape~ipad.png */; };
 		56EF5138154E59AC001E7B77 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 56173A0B154661BB00380AB4 /* Default-Landscape@2x~ipad.png */; };
 		56F369CA17C7F10100A478FB /* Game-Center-iOS-7-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F369C917C7F10100A478FB /* Game-Center-iOS-7-256.png */; };
+		9C72438429D0E1D10081FE5D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C72438329D0E1D10081FE5D /* WebKit.framework */; };
 		9CF4AE5F29CF40D3004D1914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF4AE5E29CF40D3004D1914 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -347,6 +348,7 @@
 		56ECD92D1540703500565615 /* putr.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = putr.txt; sourceTree = "<group>"; };
 		56EE12161682063F00C051B2 /* Description */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 0; lastKnownFileType = text; path = Description; sourceTree = "<group>"; tabWidth = 1; usesTabs = 0; wrapsLines = 1; };
 		56F369C917C7F10100A478FB /* Game-Center-iOS-7-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game-Center-iOS-7-256.png"; sourceTree = "<group>"; };
+		9C72438329D0E1D10081FE5D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9CF4AE5E29CF40D3004D1914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,6 +362,7 @@
 				56DB82C716724C8C00C243A8 /* AVFoundation.framework in Frameworks */,
 				560FA0D0137991AD0017EE25 /* UIKit.framework in Frameworks */,
 				560FA0D2137991AD0017EE25 /* Foundation.framework in Frameworks */,
+				9C72438429D0E1D10081FE5D /* WebKit.framework in Frameworks */,
 				560FA0D4137991AD0017EE25 /* CoreGraphics.framework in Frameworks */,
 				5675E5D51425004400882CD8 /* AudioToolbox.framework in Frameworks */,
 				1DBF44271573D1E7002BF8E7 /* libz.dylib in Frameworks */,
@@ -392,6 +395,7 @@
 		560FA0CE137991AD0017EE25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C72438329D0E1D10081FE5D /* WebKit.framework */,
 				567386A51673B44C0069C1EA /* SystemConfiguration.framework */,
 				560FA0CF137991AD0017EE25 /* UIKit.framework */,
 				560FA0D1137991AD0017EE25 /* Foundation.framework */,
@@ -1201,7 +1205,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1973;
+				CURRENT_PROJECT_VERSION = 1974;
 				DEVELOPMENT_TEAM = 6HW9SJ9Q7N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1220,7 +1224,7 @@
 					"$(inherited)",
 					"/\"$(SRCROOT)/Moonlander/TestFlight\"",
 				);
-				MARKETING_VERSION = 4.0.8;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mccarron.moonlander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1239,7 +1243,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1973;
+				CURRENT_PROJECT_VERSION = 1974;
 				DEVELOPMENT_TEAM = 6HW9SJ9Q7N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1257,7 +1261,7 @@
 					"$(inherited)",
 					"/\"$(SRCROOT)/Moonlander/TestFlight\"",
 				);
-				MARKETING_VERSION = 4.0.8;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mccarron.moonlander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

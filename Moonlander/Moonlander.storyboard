@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="dGu-Hk-qA7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="dGu-Hk-qA7">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -197,18 +197,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbp-YL-yv8">
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-AN-Gid">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Yva-8w-e3Y" id="3MO-OA-zzR"/>
-                                </connections>
-                            </webView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IoP-wR-u8S">
-                                <rect key="frame" x="493" y="366" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="366" y="494" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -218,12 +218,12 @@
                     <navigationItem key="navigationItem" title="Flight Controls" id="j1h-XN-k8B"/>
                     <connections>
                         <outlet property="_activityIndicator" destination="IoP-wR-u8S" id="1Lb-Xg-tmW"/>
-                        <outlet property="_documentContent" destination="sbp-YL-yv8" id="Byl-Ze-ojG"/>
+                        <outlet property="_documentContent" destination="gyK-AN-Gid" id="MTW-UE-RPL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usp-bA-DSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="-263"/>
+            <point key="canvasLocation" x="2183.59375" y="-263.0859375"/>
         </scene>
         <!--Credits View Controller-->
         <scene sceneID="sMW-Wp-tAb">
@@ -237,18 +237,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6n-cM-0AM">
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sV0-qH-dsu">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                                <connections>
-                                    <outlet property="delegate" destination="z21-tq-uoK" id="mlb-ya-nZR"/>
-                                </connections>
-                            </webView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sIr-Cp-QOT">
-                                <rect key="frame" x="493" y="366" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="366" y="494" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -258,7 +258,7 @@
                     <navigationItem key="navigationItem" title="Moonlander Credits" id="bIv-Ya-jxK"/>
                     <connections>
                         <outlet property="_activityIndicator" destination="sIr-Cp-QOT" id="R5O-zO-cFc"/>
-                        <outlet property="_documentContent" destination="P6n-cM-0AM" id="XPR-4J-l3m"/>
+                        <outlet property="_documentContent" destination="sV0-qH-dsu" id="Wgf-a7-Y9i"/>
                         <segue destination="PJ3-PK-k6G" kind="push" identifier="http://simh.trailing-edge.com/" id="uMu-QH-uPq"/>
                         <segue destination="PJ3-PK-k6G" kind="push" identifier="http://www.ultimate.com/phil/xy/" id="Hnb-ln-Yd1"/>
                         <segue destination="PJ3-PK-k6G" kind="push" identifier="http://www.brouhaha.com/~eric/retrocomputing/dec/gt40/" id="xNp-nA-x8o"/>
@@ -280,18 +280,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O26-rs-RB3">
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25f-Dp-RXq">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                                <connections>
-                                    <outlet property="delegate" destination="byQ-EJ-Rwf" id="F2V-nL-s2o"/>
-                                </connections>
-                            </webView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="whh-As-s8h">
-                                <rect key="frame" x="493" y="366" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="366" y="494" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -301,7 +301,7 @@
                     <navigationItem key="navigationItem" title="Frequently Asked Questions" id="SWl-UR-bnF"/>
                     <connections>
                         <outlet property="_activityIndicator" destination="whh-As-s8h" id="fDB-Iy-YVC"/>
-                        <outlet property="_documentContent" destination="O26-rs-RB3" id="Tlg-Vc-XxA"/>
+                        <outlet property="_documentContent" destination="25f-Dp-RXq" id="Gwa-dA-MZp"/>
                         <segue destination="PJ3-PK-k6G" kind="push" identifier="http://en.wikipedia.org/wiki/Lunar_Lander_%28video_game%29" id="Vso-dq-w75"/>
                         <segue destination="PJ3-PK-k6G" kind="push" identifier="http://en.wikipedia.org/wiki/DEC%20GT40" id="U9e-cf-8k9"/>
                         <segue destination="PJ3-PK-k6G" kind="push" identifier="http://en.wikipedia.org/wiki/PDP%2D11" id="bjS-TW-yRe"/>
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3z-qN-xTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="1167"/>
+            <point key="canvasLocation" x="2197.65625" y="1166.6015625"/>
         </scene>
         <!--Links View Controller-->
         <scene sceneID="Kyb-Oq-CeL">
@@ -326,17 +326,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMP-Jr-tsY">
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3L-TH-Slx">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                                <connections>
-                                    <outlet property="delegate" destination="PJ3-PK-k6G" id="WDI-OQ-sfm"/>
-                                </connections>
-                            </webView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="35B-x2-zv6">
-                                <rect key="frame" x="494" y="365" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="366" y="494" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -345,7 +346,7 @@
                     <navigationItem key="navigationItem" id="3kC-Z7-3cb"/>
                     <connections>
                         <outlet property="_activityIndicator" destination="35B-x2-zv6" id="acN-cU-jor"/>
-                        <outlet property="_documentContent" destination="NMP-Jr-tsY" id="Lfz-oK-5ON"/>
+                        <outlet property="_documentContent" destination="Z3L-TH-Slx" id="BbA-FQ-xx2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2N-OH-RLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +398,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pjc-R8-KNF"/>
+        <segue reference="xNp-nA-x8o"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="controls.png" width="387" height="79"/>

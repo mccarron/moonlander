@@ -57,8 +57,13 @@
 
     // Start up the activity indicator
     [self.activityIndicator startAnimating];
-    
+
+    // Prevents white screen flash.
+    self.documentContent.opaque = NO;
+    self.documentContent.backgroundColor = [UIColor clearColor];
+
     // Load the document/web page
+    [self.documentContent setNavigationDelegate:self];
     NSString *path = [[NSBundle mainBundle] pathForResource:self.documentName ofType:self.documentType];
     self.documentURL = (path == nil) ? [NSURL URLWithString:self.documentName] : [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:self.documentURL];
@@ -73,9 +78,6 @@
 {
     [super viewWillAppear:animated];
     
-    // Allow scrolling/zooming in a document
-    self.documentContent.scalesPageToFit = NO;
-
     // Show the navagation bar in this view so we can get back
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
@@ -84,6 +86,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
+    // Sample error message for testing
+//    NSError * myInternalError = [NSError errorWithDomain:@"com.mccarron.error" code:42 userInfo:NULL];
+//    [self showErrorPageWithError:myInternalError];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -94,14 +100,15 @@
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
 }
 
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    //NSLog(@"type: %d req: %@", navigationType, request.URL.absoluteString);
-    BOOL result = YES;
-    if (navigationType == UIWebViewNavigationTypeLinkClicked && self.segueActive == NO) {
-        // Push a new web view to handle the request
-        result = NO;
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 
+    WKNavigationActionPolicy result = WKNavigationActionPolicyAllow;
+    if (navigationAction.navigationType == UIWebViewNavigationTypeLinkClicked && self.segueActive == NO) {
+        // Push a new web view to handle the request
+        result = WKNavigationActionPolicyCancel;
+        
+        NSURLRequest *request = navigationAction.request;
+        
         // Check which name we use for local and web hrefs
         if ([request.URL.scheme isEqualToString:@"file"]) {
             [self performSegueWithIdentifier:request.URL.lastPathComponent sender:self];
@@ -110,21 +117,27 @@
             [self performSegueWithIdentifier:request.URL.absoluteString sender:self];
         }
     }
-    return result;
+    
+    decisionHandler(result);
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
     [self.activityIndicator startAnimating];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [self.activityIndicator stopAnimating];
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    [self showErrorPageWithError: error];
+}
+
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    [self showErrorPageWithError: error];
+}
+
+- (void)showErrorPageWithError:(NSError *)error {
     // Load error, hide the activity indicator in the status bar
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
