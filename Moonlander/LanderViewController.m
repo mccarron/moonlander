@@ -751,7 +751,7 @@ const float RollButtonRepeatInterval = 0.20;        // Timer value for roll butt
     // Create the instrumentation labels
     const float InstrumentSizeWidth = 200;
     const float InstrumentSizeHeight = 24;
-    const float InstrumentYCoordinate = 720;
+    const float InstrumentYCoordinate = 720; // PRM: Top edge
     const float InstrumentYCoordinate2 = InstrumentYCoordinate - InstrumentSizeHeight;
     self.instrument1 = [[Instrument alloc] initWithFrame:CGRectMake(0, InstrumentYCoordinate, InstrumentSizeWidth, InstrumentSizeHeight)];
     self.instrument1.instrument = self.heightData;
