@@ -111,11 +111,10 @@ const short RadiusIncrement2 = -10;
             dispatch_sync(dispatch_get_main_queue(), ^{
                 explosionView = [[Explosion alloc] initWithFrame:frameRect];
                 explosionView.center = center;
+                // Populate the view with dust
+                [explosionView EXGEN:self.currentRadius];
             });
-           
-            // Populate the view with dust
-            [explosionView EXGEN:self.currentRadius];
-            
+                       
             // Update the radius for the next view
             self.currentRadius += self.radiusIncrement;
             self.radiusIncrement = (self.radiusIncrement == RadiusIncrement1) ? RadiusIncrement2 : RadiusIncrement1;
